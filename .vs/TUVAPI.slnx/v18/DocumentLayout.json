@@ -1,0 +1,214 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|c:\\users\\banele\\documents\\github\\tuvapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|c:\\users\\banele\\documents\\github\\tuvapi\\skills\\voucherskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|solutionrelative:skills\\voucherskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|c:\\users\\banele\\documents\\github\\tuvapi\\orchestration\\systemprompts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|solutionrelative:orchestration\\systemprompts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|c:\\users\\banele\\documents\\github\\tuvapi\\orchestration\\chatorchestrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|solutionrelative:orchestration\\chatorchestrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|c:\\users\\banele\\documents\\github\\tuvapi\\models\\voucherresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|solutionrelative:models\\voucherresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|c:\\users\\banele\\documents\\github\\tuvapi\\models\\voucherrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|solutionrelative:models\\voucherrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|c:\\users\\banele\\documents\\github\\tuvapi\\infrastructure\\loggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|solutionrelative:infrastructure\\loggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|c:\\users\\banele\\documents\\github\\tuvapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|c:\\users\\banele\\documents\\github\\tuvapi\\data\\voucherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|solutionrelative:data\\voucherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|c:\\users\\banele\\documents\\github\\tuvapi\\data\\ivoucherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|solutionrelative:data\\ivoucherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|c:\\users\\banele\\documents\\github\\tuvapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|c:\\users\\banele\\documents\\github\\tuvapi\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691CEDB3-0CA8-7207-B534-508D5079DAAC}|TUVAPI.csproj|solutionrelative:controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-27T06:14:19.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VoucherSkill.cs",
+              "DocumentMoniker": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Skills\\VoucherSkill.cs",
+              "RelativeDocumentMoniker": "Skills\\VoucherSkill.cs",
+              "ToolTip": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Skills\\VoucherSkill.cs",
+              "RelativeToolTip": "Skills\\VoucherSkill.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAwEcAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T05:58:27.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SystemPrompts.cs",
+              "DocumentMoniker": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Orchestration\\SystemPrompts.cs",
+              "RelativeDocumentMoniker": "Orchestration\\SystemPrompts.cs",
+              "ToolTip": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Orchestration\\SystemPrompts.cs",
+              "RelativeToolTip": "Orchestration\\SystemPrompts.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T05:52:22.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChatOrchestrator.cs",
+              "DocumentMoniker": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Orchestration\\ChatOrchestrator.cs",
+              "RelativeDocumentMoniker": "Orchestration\\ChatOrchestrator.cs",
+              "ToolTip": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Orchestration\\ChatOrchestrator.cs",
+              "RelativeToolTip": "Orchestration\\ChatOrchestrator.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T05:51:14.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VoucherResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Models\\VoucherResponse.cs",
+              "RelativeDocumentMoniker": "Models\\VoucherResponse.cs",
+              "ToolTip": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Models\\VoucherResponse.cs",
+              "RelativeToolTip": "Models\\VoucherResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T05:50:37.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VoucherRecord.cs",
+              "DocumentMoniker": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Models\\VoucherRecord.cs",
+              "RelativeDocumentMoniker": "Models\\VoucherRecord.cs",
+              "ToolTip": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Models\\VoucherRecord.cs",
+              "RelativeToolTip": "Models\\VoucherRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T05:50:29.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoggingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Infrastructure\\LoggingMiddleware.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\LoggingMiddleware.cs",
+              "ToolTip": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Infrastructure\\LoggingMiddleware.cs",
+              "RelativeToolTip": "Infrastructure\\LoggingMiddleware.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T05:49:36.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T17:25:07.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VoucherRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Data\\VoucherRepository.cs",
+              "RelativeDocumentMoniker": "Data\\VoucherRepository.cs",
+              "ToolTip": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Data\\VoucherRepository.cs",
+              "RelativeToolTip": "Data\\VoucherRepository.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T05:48:59.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IVoucherRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Data\\IVoucherRepository.cs",
+              "RelativeDocumentMoniker": "Data\\IVoucherRepository.cs",
+              "ToolTip": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Data\\IVoucherRepository.cs",
+              "RelativeToolTip": "Data\\IVoucherRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T05:48:36.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T05:48:28.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ChatController.cs",
+              "DocumentMoniker": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Controllers\\ChatController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ChatController.cs",
+              "ToolTip": "C:\\Users\\Banele\\Documents\\GitHub\\TUVAPI\\Controllers\\ChatController.cs",
+              "RelativeToolTip": "Controllers\\ChatController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T05:45:46.407Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
