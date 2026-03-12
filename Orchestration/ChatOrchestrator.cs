@@ -16,7 +16,6 @@ public interface IChatOrchestrator
 /// <summary>
 /// Drives the Semantic Kernel pipeline for a single chat turn.
 /// Responsibility: receive raw text → run kernel with tool-calling → return structured result.
-/// Business logic: zero. That is the skill's job.
 /// </summary>
 public class ChatOrchestrator : IChatOrchestrator
 {

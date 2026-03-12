@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AffiliatesAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a32c88a2654970f5f7bab7fa354016af38aaaea1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c98d1d83eb98af298be66a3c4f7318d825943d6d")]
 [assembly: System.Reflection.AssemblyProductAttribute("AffiliatesAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AffiliatesAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
