@@ -47,14 +47,14 @@ public class ChatController : ControllerBase
 
         try
         {
-            var response = await _orchestrator.ProcessAsync(request.Message, conversationId);
+            var response = await _orchestrator.ProcessAsync(request.Message, conversationId, request.Language);
             return Ok(response);
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Unhandled error in Chat endpoint | ConversationId={ConvId}", conversationId);
             return StatusCode(StatusCodes.Status500InternalServerError,
-                new { error = "An unexpected error occurred. Please try again or contact support." });
+                new { error = ex.Message, detail = ex.InnerException?.Message });
         }
     }
 }

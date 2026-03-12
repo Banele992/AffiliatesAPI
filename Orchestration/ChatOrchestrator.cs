@@ -10,7 +10,7 @@ namespace AffiliatesAPI.Orchestration;
 /// </summary>
 public interface IChatOrchestrator
 {
-    Task<ChatResponse> ProcessAsync(string message, string conversationId);
+    Task<ChatResponse> ProcessAsync(string message, string conversationId, string language = "en");
 }
 
 /// <summary>
@@ -32,12 +32,12 @@ public class ChatOrchestrator : IChatOrchestrator
         _logger = logger;
     }
 
-    public async Task<ChatResponse> ProcessAsync(string message, string conversationId)
+    public async Task<ChatResponse> ProcessAsync(string message, string conversationId, string language = "en")
     {
-        _logger.LogInformation("Processing message | ConversationId={ConvId} Message={Message}",
-            conversationId, message);
+        _logger.LogInformation("Processing message | ConversationId={ConvId} Language={Lang} Message={Message}",
+            conversationId, language, message);
 
-        var history = await GetOrCreateHistoryAsync(conversationId);
+        var history = await GetOrCreateHistoryAsync(conversationId, language);
 
         history.AddUserMessage(message);
 
@@ -70,9 +70,9 @@ public class ChatOrchestrator : IChatOrchestrator
         };
     }
 
-    //Private Helpers
+    // ─── Private Helpers ──────────────────────────────────────────────────────
 
-    private async Task<ChatHistory> GetOrCreateHistoryAsync(string conversationId)
+    private async Task<ChatHistory> GetOrCreateHistoryAsync(string conversationId, string language)
     {
         await _sessionLock.WaitAsync();
         try
@@ -81,6 +81,7 @@ public class ChatOrchestrator : IChatOrchestrator
             {
                 history = new ChatHistory();
                 history.AddSystemMessage(SystemPrompts.Main);
+                history.AddSystemMessage(SystemPrompts.GetLanguageInstruction(language));
                 _sessions[conversationId] = history;
             }
             return history;

@@ -13,4 +13,10 @@ public class ChatRequest
     /// If null a new conversation is started.
     /// </summary>
     public string? ConversationId { get; set; }
+
+    /// <summary>
+    /// BCP-47 language code selected by the user (e.g. "en", "zu", "af", "pt", "fr").
+    /// Defaults to "en" if not supplied.
+    /// </summary>
+    public string Language { get; set; } = "en";
 }
