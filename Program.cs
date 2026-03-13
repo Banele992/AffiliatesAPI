@@ -23,7 +23,8 @@ builder.Host.UseSerilog();
 var config         = builder.Configuration;
 var aoaiSection    = config.GetSection("AzureOpenAI");
 var aoaiEndpoint   = aoaiSection["Endpoint"]       ?? throw new InvalidOperationException("AzureOpenAI:Endpoint is not configured.");
-var aoaiDeployment = aoaiSection["DeploymentName"] ?? throw new InvalidOperationException("AzureOpenAI:DeploymentName is not configured.");
+// Fallback to gpt5-nano if deployment name isn't explicitly configured for faster responses
+var aoaiDeployment = aoaiSection["DeploymentName"] ?? "gpt5-nano";
 var aoaiApiKey     = aoaiSection["ApiKey"]         ?? throw new InvalidOperationException("AzureOpenAI:ApiKey is not configured.");
 var aoaiApiVersion = aoaiSection["ApiVersion"]     ?? "2024-12-01-preview";
 

@@ -2,6 +2,7 @@ using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.ChatCompletion;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
 using AffiliatesAPI.Models;
+using System.Collections.Concurrent;
 
 namespace AffiliatesAPI.Orchestration;
 
@@ -11,6 +12,7 @@ namespace AffiliatesAPI.Orchestration;
 public interface IChatOrchestrator
 {
     Task<ChatResponse> ProcessAsync(string message, string conversationId, string language = "en");
+    IAsyncEnumerable<string> ProcessStreamAsync(string message, string conversationId, string language = "en");
 }
 
 /// <summary>
@@ -22,9 +24,8 @@ public class ChatOrchestrator : IChatOrchestrator
     private readonly Kernel _kernel;
     private readonly ILogger<ChatOrchestrator> _logger;
 
-    // In-memory conversation store keyed by ConversationId.
-    private static readonly Dictionary<string, ChatHistory> _sessions = new();
-    private static readonly SemaphoreSlim _sessionLock = new(1, 1);
+    // In-memory lock-free conversation store keyed by ConversationId.
+    private static readonly ConcurrentDictionary<string, ChatHistory> _sessions = new();
 
     public ChatOrchestrator(Kernel kernel, ILogger<ChatOrchestrator> logger)
     {
@@ -37,9 +38,20 @@ public class ChatOrchestrator : IChatOrchestrator
         _logger.LogInformation("Processing message | ConversationId={ConvId} Language={Lang} Message={Message}",
             conversationId, language, message);
 
-        var history = await GetOrCreateHistoryAsync(conversationId, language);
+        var history = GetOrCreateHistory(conversationId, language);
 
         history.AddUserMessage(message);
+
+        // Keep history trim (system prompt = 2 messages, plus max 10 user/assistant turns)
+        if (history.Count > 12)
+        {
+            var trimmedHistory = new ChatHistory();
+            // Preserve the system prompts
+            trimmedHistory.AddRange(history.Take(2));
+            // Keep the last 10 messages
+            trimmedHistory.AddRange(history.Skip(history.Count - 10));
+            history = trimmedHistory;
+        }
 
         var chatCompletion = _kernel.GetRequiredService<IChatCompletionService>();
 
@@ -47,7 +59,8 @@ public class ChatOrchestrator : IChatOrchestrator
         {
             // Core mechanism: the LLM emits function calls,
             // Semantic Kernel intercepts and executes the C# skill methods automatically.
-            ToolCallBehavior = ToolCallBehavior.AutoInvokeKernelFunctions
+            ToolCallBehavior = ToolCallBehavior.AutoInvokeKernelFunctions,
+            ExtensionData = new Dictionary<string, object> { { "max_completion_tokens", 150 } }
         };
 
         var result = await chatCompletion.GetChatMessageContentAsync(
@@ -58,7 +71,7 @@ public class ChatOrchestrator : IChatOrchestrator
         var reply = result.Content ?? "I'm sorry, I was unable to process your request. Please try again.";
 
         history.AddAssistantMessage(reply);
-        await SaveHistoryAsync(conversationId, history);
+        _sessions[conversationId] = history;
 
         _logger.LogInformation("Response generated | ConversationId={ConvId} Reply={Reply}",
             conversationId, reply);
@@ -70,38 +83,75 @@ public class ChatOrchestrator : IChatOrchestrator
         };
     }
 
-    // ─── Private Helpers ──────────────────────────────────────────────────────
+    // ─── Streaming Implementation ─────────────────────────────────────────────
 
-    private async Task<ChatHistory> GetOrCreateHistoryAsync(string conversationId, string language)
+    public async IAsyncEnumerable<string> ProcessStreamAsync(string message, string conversationId, string language = "en")
     {
-        await _sessionLock.WaitAsync();
-        try
+        _logger.LogInformation("Processing message stream | ConversationId={ConvId} Language={Lang} Message={Message}",
+            conversationId, language, message);
+
+        var history = GetOrCreateHistory(conversationId, language);
+
+        history.AddUserMessage(message);
+
+        // Keep history trim (system prompt = 2 messages, plus max 10 user/assistant turns)
+        if (history.Count > 12)
         {
-            if (!_sessions.TryGetValue(conversationId, out var history))
+            var trimmedHistory = new ChatHistory();
+            // Preserve the system prompts
+            trimmedHistory.AddRange(history.Take(2));
+            // Keep the last 10 messages
+            trimmedHistory.AddRange(history.Skip(history.Count - 10));
+            history = trimmedHistory;
+        }
+
+        var chatCompletion = _kernel.GetRequiredService<IChatCompletionService>();
+
+        var executionSettings = new OpenAIPromptExecutionSettings
+        {
+            ToolCallBehavior = ToolCallBehavior.AutoInvokeKernelFunctions,
+            ExtensionData = new Dictionary<string, object> { { "max_completion_tokens", 150 } }
+        };
+
+        var result = chatCompletion.GetStreamingChatMessageContentsAsync(
+            history,
+            executionSettings,
+            _kernel);
+
+        var replyBuilder = new System.Text.StringBuilder();
+
+        await foreach (var chunk in result)
+        {
+            if (!string.IsNullOrEmpty(chunk.Content))
             {
-                history = new ChatHistory();
-                history.AddSystemMessage(SystemPrompts.Main);
-                history.AddSystemMessage(SystemPrompts.GetLanguageInstruction(language));
-                _sessions[conversationId] = history;
+                replyBuilder.Append(chunk.Content);
+                yield return chunk.Content;
             }
-            return history;
         }
-        finally
+
+        var reply = replyBuilder.ToString();
+        if (string.IsNullOrWhiteSpace(reply))
         {
-            _sessionLock.Release();
+            reply = "I'm sorry, I was unable to process your request. Please try again.";
+            yield return reply;
         }
+
+        history.AddAssistantMessage(reply);
+        _sessions[conversationId] = history;
+
+        _logger.LogInformation("Streaming response generated | ConversationId={ConvId}", conversationId);
     }
 
-    private async Task SaveHistoryAsync(string conversationId, ChatHistory history)
+    // ─── Private Helpers ──────────────────────────────────────────────────────
+
+    private ChatHistory GetOrCreateHistory(string conversationId, string language)
     {
-        await _sessionLock.WaitAsync();
-        try
+        return _sessions.GetOrAdd(conversationId, _ => 
         {
-            _sessions[conversationId] = history;
-        }
-        finally
-        {
-            _sessionLock.Release();
-        }
+            var newHistory = new ChatHistory();
+            newHistory.AddSystemMessage(SystemPrompts.Main);
+            newHistory.AddSystemMessage(SystemPrompts.GetLanguageInstruction(language));
+            return newHistory;
+        });
     }
 }
