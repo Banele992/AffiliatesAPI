@@ -60,7 +60,7 @@ public class ChatOrchestrator : IChatOrchestrator
             // Core mechanism: the LLM emits function calls,
             // Semantic Kernel intercepts and executes the C# skill methods automatically.
             ToolCallBehavior = ToolCallBehavior.AutoInvokeKernelFunctions,
-            ExtensionData = new Dictionary<string, object> { { "max_completion_tokens", 150 } }
+            ExtensionData = new Dictionary<string, object> { { "max_completion_tokens", 120 } }
         };
 
         var result = await chatCompletion.GetChatMessageContentAsync(
@@ -110,7 +110,7 @@ public class ChatOrchestrator : IChatOrchestrator
         var executionSettings = new OpenAIPromptExecutionSettings
         {
             ToolCallBehavior = ToolCallBehavior.AutoInvokeKernelFunctions,
-            ExtensionData = new Dictionary<string, object> { { "max_completion_tokens", 150 } }
+            ExtensionData = new Dictionary<string, object> { { "max_completion_tokens", 120 } }
         };
 
         var result = chatCompletion.GetStreamingChatMessageContentsAsync(

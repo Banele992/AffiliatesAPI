@@ -46,15 +46,21 @@ var kernelBuilder = Kernel.CreateBuilder()
 
 // Register AffiliatesFaqSkill — no database dependency required.
 builder.Services.AddSingleton<AffiliatesFaqSkill>();
+// Register GlossarySkill
+builder.Services.AddSingleton<GlossarySkill>();
 
 builder.Services.AddSingleton(sp =>
 {
-    var skill  = sp.GetRequiredService<AffiliatesFaqSkill>();
-    var kernel = kernelBuilder.Build();
+    var faqSkill      = sp.GetRequiredService<AffiliatesFaqSkill>();
+    var glossarySkill = sp.GetRequiredService<GlossarySkill>();
+    var kernel        = kernelBuilder.Build();
 
     // Register the AffiliatesFaqSkill as a Semantic Kernel plugin.
     // The kernel will auto-invoke its functions when the LLM decides they're needed.
-    kernel.Plugins.AddFromObject(skill, "AffiliatesFaqSkill");
+    kernel.Plugins.AddFromObject(faqSkill, "AffiliatesFaqSkill");
+    
+    // Register the GlossarySkill
+    kernel.Plugins.AddFromObject(glossarySkill, "GlossarySkill");
 
     return kernel;
 });

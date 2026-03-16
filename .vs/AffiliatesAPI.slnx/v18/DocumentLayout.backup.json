@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Banele\\Documents\\GitHub\\AffiliatesAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C4C6641-F45B-1FDC-1F24-A858EE21C9D6}|AffiliatesAPI.csproj|c:\\users\\banele\\documents\\github\\affiliatesapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9C4C6641-F45B-1FDC-1F24-A858EE21C9D6}|AffiliatesAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{9C4C6641-F45B-1FDC-1F24-A858EE21C9D6}|AffiliatesAPI.csproj|c:\\users\\banele\\documents\\github\\affiliatesapi\\orchestration\\systemprompts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C4C6641-F45B-1FDC-1F24-A858EE21C9D6}|AffiliatesAPI.csproj|solutionrelative:orchestration\\systemprompts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9C4C6641-F45B-1FDC-1F24-A858EE21C9D6}|AffiliatesAPI.csproj|c:\\users\\banele\\documents\\github\\affiliatesapi\\orchestration\\chatorchestrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C4C6641-F45B-1FDC-1F24-A858EE21C9D6}|AffiliatesAPI.csproj|solutionrelative:orchestration\\chatorchestrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C4C6641-F45B-1FDC-1F24-A858EE21C9D6}|AffiliatesAPI.csproj|c:\\users\\banele\\documents\\github\\affiliatesapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9C4C6641-F45B-1FDC-1F24-A858EE21C9D6}|AffiliatesAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9C4C6641-F45B-1FDC-1F24-A858EE21C9D6}|AffiliatesAPI.csproj|c:\\users\\banele\\documents\\github\\affiliatesapi\\infrastructure\\loggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9C4C6641-F45B-1FDC-1F24-A858EE21C9D6}|AffiliatesAPI.csproj|c:\\users\\banele\\documents\\github\\affiliatesapi\\models\\chatresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C4C6641-F45B-1FDC-1F24-A858EE21C9D6}|AffiliatesAPI.csproj|solutionrelative:models\\chatresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C4C6641-F45B-1FDC-1F24-A858EE21C9D6}|AffiliatesAPI.csproj|c:\\users\\banele\\documents\\github\\affiliatesapi\\orchestration\\systemprompts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C4C6641-F45B-1FDC-1F24-A858EE21C9D6}|AffiliatesAPI.csproj|solutionrelative:orchestration\\systemprompts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,24 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Banele\\Documents\\GitHub\\AffiliatesAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Banele\\Documents\\GitHub\\AffiliatesAPI\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-11T14:23:32.881Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LoggingMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\Banele\\Documents\\GitHub\\AffiliatesAPI\\Infrastructure\\LoggingMiddleware.cs",
               "RelativeDocumentMoniker": "Infrastructure\\LoggingMiddleware.cs",
@@ -73,13 +60,40 @@
               "RelativeDocumentMoniker": "Orchestration\\ChatOrchestrator.cs",
               "ToolTip": "C:\\Users\\Banele\\Documents\\GitHub\\AffiliatesAPI\\Orchestration\\ChatOrchestrator.cs",
               "RelativeToolTip": "Orchestration\\ChatOrchestrator.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAwCMAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAYwCMAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T06:06:14.915Z"
+              "WhenOpened": "2026-03-10T06:06:14.915Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "SystemPrompts.cs",
+              "DocumentMoniker": "C:\\Users\\Banele\\Documents\\GitHub\\AffiliatesAPI\\Orchestration\\SystemPrompts.cs",
+              "RelativeDocumentMoniker": "Orchestration\\SystemPrompts.cs",
+              "ToolTip": "C:\\Users\\Banele\\Documents\\GitHub\\AffiliatesAPI\\Orchestration\\SystemPrompts.cs",
+              "RelativeToolTip": "Orchestration\\SystemPrompts.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwBsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T06:25:53.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Banele\\Documents\\GitHub\\AffiliatesAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Banele\\Documents\\GitHub\\AffiliatesAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-11T14:23:32.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ChatRequest.cs",
               "DocumentMoniker": "C:\\Users\\Banele\\Documents\\GitHub\\AffiliatesAPI\\Models\\ChatRequest.cs",
               "RelativeDocumentMoniker": "Models\\ChatRequest.cs",
@@ -91,7 +105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ChatController.cs",
               "DocumentMoniker": "C:\\Users\\Banele\\Documents\\GitHub\\AffiliatesAPI\\Controllers\\ChatController.cs",
               "RelativeDocumentMoniker": "Controllers\\ChatController.cs",
@@ -103,7 +117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ChatResponse.cs",
               "DocumentMoniker": "C:\\Users\\Banele\\Documents\\GitHub\\AffiliatesAPI\\Models\\ChatResponse.cs",
               "RelativeDocumentMoniker": "Models\\ChatResponse.cs",
@@ -112,18 +126,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-10T06:30:47.868Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SystemPrompts.cs",
-              "DocumentMoniker": "C:\\Users\\Banele\\Documents\\GitHub\\AffiliatesAPI\\Orchestration\\SystemPrompts.cs",
-              "RelativeDocumentMoniker": "Orchestration\\SystemPrompts.cs",
-              "ToolTip": "C:\\Users\\Banele\\Documents\\GitHub\\AffiliatesAPI\\Orchestration\\SystemPrompts.cs",
-              "RelativeToolTip": "Orchestration\\SystemPrompts.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T06:25:53.915Z"
             }
           ]
         }
